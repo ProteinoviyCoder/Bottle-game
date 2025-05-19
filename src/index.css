@@ -1,0 +1,124 @@
+:root {
+  --text-color: #242424;
+  --text-bg-color: #333333;
+  --text-bg-semi-color: #ecececf4;
+  --text-size: 1rem;
+
+  --bg-semi-color: #141414cc;
+  --bg-core-color: #e6e4e4d5;
+  --bg-skeleton-color: #90909033;
+
+  --default-btn-bg: #edededf1;
+  --default-btn-bg-dark: #d6d6d6e8;
+  --default-btn-text-color: #1d1d1d;
+
+  --kiss-btn-bg: #058d19;
+  --kiss-btn-bg-dark: #036203;
+  --kiss-btn-text-color: #eaeaeadb;
+
+  --handshake-btn-bg: #004ad4;
+  --handshake-btn-bg-dark: #01379c;
+  --handshake-btn-text-color: #eaeaeadb;
+
+  --reject-btn-bg: #be1708;
+  --reject-btn-bg-dark: #a01509;
+  --reject-btn-text-color: #eaeaeadb;
+
+  --color-shadow: #00000066;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: var(--text-size);
+  color: var(--text-color);
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+/* ----------------- Анимации скелетонов --------------------- */
+@keyframes skeletonAtAngle {
+  0% {
+    transform: rotate(-30deg) translateY(40%) translateX(-5%);
+  }
+  100% {
+    transform: rotate(-30deg) translateY(40%) translateX(100%);
+  }
+}
+
+.skeleton-at-angle {
+  position: relative;
+  overflow: hidden;
+
+  width: 100%;
+  height: 100%;
+}
+
+.sceleton-at-angle::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 5%;
+  background: linear-gradient(
+    to right,
+    var(--bg-skeleton-color),
+    #53535342 50%,
+    var(--bg-skeleton-color)
+  );
+
+  transform: rotate(-35deg) translateY(-10%) translateX(800%);
+
+  animation: skeletonAtAngle infinite 1.5s ease;
+}
+
+@keyframes skeleton {
+  0% {
+    transform: translateY(-10%) translateX(-40%);
+  }
+  100% {
+    transform: translateY(-10%) translateX(550%);
+  }
+}
+
+.skeleton {
+  position: relative;
+}
+
+.sceleton::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 170%;
+  width: 20%;
+  background: linear-gradient(
+    to right,
+    var(--bg-skeleton-color),
+    #53535342 50%,
+    var(--bg-skeleton-color)
+  );
+
+  transform: translateY(-10%) translateX(800%);
+
+  animation: skeleton infinite 1.5s ease;
+}
+
+/* --------------------------------------------------------------------- */

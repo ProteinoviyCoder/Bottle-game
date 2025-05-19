@@ -1,0 +1,80 @@
+.container {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100vw;
+  height: 100vh;
+
+  color: var(--text-bg-color);
+
+  background-image: url("./images/bg.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: "rgba(255, 255, 255, 0.2)";
+  backdrop-filter: blur(100px);
+}
+
+.bg-blur {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+}
+
+.container-skeleton {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  width: min(80vw, 80vh);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background-color: var(--bg-skeleton-color);
+
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes skeletonAtAngle {
+  0% {
+    transform: rotate(-30deg) translateY(-10%) translateX(-35%);
+  }
+  100% {
+    transform: rotate(-30deg) translateY(-10%) translateX(550%);
+  }
+}
+
+.circle::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 170%;
+  width: 20%;
+  background: linear-gradient(
+    to right,
+    var(--bg-skeleton-color),
+    #53535356 50%,
+    var(--bg-skeleton-color)
+  );
+
+  transform: rotate(-35deg) translateY(-10%) translateX(800%);
+
+  animation: skeletonAtAngle infinite 1.5s ease;
+}

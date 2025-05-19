@@ -1,0 +1,99 @@
+.container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(1, 1, 1, 0);
+  transition: 1.5s ease;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.circle-anim {
+  transform: translate(0);
+  transition: 1.2s ease;
+}
+
+.kiss {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  & img {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%) rotate(20deg);
+
+    transition: 1s ease-out;
+
+    width: 70%;
+    max-width: 400px;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+.brokenHeart {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  & .brokenHeart-left {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-80%, -50%);
+
+    transition: 1s ease-in;
+
+    width: 70%;
+    max-width: 250px;
+    aspect-ratio: 1 / 1;
+  }
+
+  & .brokenHeart-right {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-30%, -50%);
+
+    transition: 1s ease-in;
+
+    width: 70%;
+    max-width: 250px;
+    aspect-ratio: 1 / 1;
+  }
+}
+
+.handshake {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  & img {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%) rotate(-20deg);
+
+    transition: 1s ease-out;
+
+    width: 70%;
+    max-width: 300px;
+    aspect-ratio: 16 / 9;
+  }
+}

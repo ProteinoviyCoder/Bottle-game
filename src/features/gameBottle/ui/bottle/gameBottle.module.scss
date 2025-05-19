@@ -1,0 +1,124 @@
+@keyframes animSpinBtn {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.container-bottle {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  & img {
+    width: clamp(50px, min(15vw, 15vh), 250px);
+    aspect-ratio: 2/7;
+    transition: 4s ease-out;
+  }
+
+  & .spin-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: clamp(120px, 20vw, 250px);
+    border-radius: 10px;
+    height: 70px;
+
+    font-size: 1.5rem;
+    font-weight: 600;
+
+    background-color: var(--default-btn-bg);
+    border: none;
+    box-shadow: 0 0 7px 5px var(--color-shadow);
+
+    animation: animSpinBtn infinite 3s ease;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: var(--default-btn-bg-dark);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .timer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 10px 20px;
+    border-radius: 5px;
+
+    background-color: var(--bg-core-color);
+    color: var(--text-bg-color);
+
+    font-size: 3rem;
+    line-height: 3.1rem;
+  }
+}
+
+.container-modal-avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+
+  & .modal-avatar {
+    width: clamp(20px, min(12vw, 12vh), 120px);
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
+
+.container-buttons {
+  margin: 25px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  & .img-icon-kiss {
+    width: 40px;
+    aspect-ratio: 16/9;
+    transform: rotate(10deg);
+  }
+
+  & .img-icon-handshake {
+    width: 35px;
+    aspect-ratio: 16/9;
+    transform: rotate(-15deg);
+  }
+
+  & .containerimg-icon-broken-heart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    background-color: var(--bg-core-color);
+    padding: 4px 2px;
+    border-radius: 50%;
+
+    & .img-icon-broken-heart {
+      width: 15px;
+      aspect-ratio: 1/1;
+
+      &:first-child {
+        transform: translateX(2px);
+      }
+      &:last-child {
+        transform: translateX(-2px);
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.count-kiss {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  background-color: var(--bg-semi-color);
+  color: var(--text-bg-semi-color);
+
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.kiss-img {
+  width: 50px;
+  aspect-ratio: 16/9;
+  transform: rotate(10deg);
+}

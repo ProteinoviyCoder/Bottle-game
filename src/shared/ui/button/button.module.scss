@@ -1,0 +1,99 @@
+@keyframes animLoader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(2520deg);
+  }
+}
+
+.button {
+  position: relative;
+  width: 100%;
+  max-width: 200px;
+  padding: 10px 20px;
+
+  font-weight: 600;
+  font-size: 1rem;
+
+  border-radius: 10px;
+  box-shadow: 0 0 5px 2px var(--color-shadow);
+
+  user-select: none;
+
+  transition: 0.3s ease;
+  cursor: pointer;
+
+  outline: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  @media (hover: hover) {
+    &:hover {
+      transition: 0.3s ease;
+      transform: scale(0.99);
+    }
+  }
+
+  & .loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & .loader svg {
+    font-size: 1.2rem;
+    animation: animLoader 5s linear infinite;
+  }
+}
+
+.default-btn {
+  border: none;
+  color: var(--default-btn-text-color);
+  background-color: var(--default-btn-bg);
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--default-btn-bg-dark);
+    }
+  }
+}
+
+.button.kiss {
+  border: none;
+  color: var(--kiss-btn-text-color);
+  background-color: var(--kiss-btn-bg);
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--kiss-btn-bg-dark);
+    }
+  }
+}
+
+.button.handshake {
+  border: none;
+  color: var(--handshake-btn-text-color);
+  background-color: var(--handshake-btn-bg);
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--handshake-btn-bg-dark);
+    }
+  }
+}
+
+.button.reject {
+  border: none;
+  color: var(--reject-btn-text-color);
+  background-color: var(--reject-btn-bg);
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--reject-btn-bg-dark);
+    }
+  }
+}
