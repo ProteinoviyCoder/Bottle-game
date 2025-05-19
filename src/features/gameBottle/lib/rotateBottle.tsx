@@ -18,7 +18,7 @@ export const rotateBottle = (
     ? angleInDegrees + extraScrolls + extarDeg + prevDeg
     : angleInDegrees + extraScrolls + prevDeg;
 
-  const audio = new Audio("./sounds/rotate-sound.mp3");
+  const audio = new Audio("/sounds/rotate-sound.mp3");
 
   loopSound(Date.now(), timing, audio);
 

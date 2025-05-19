@@ -15,7 +15,7 @@ const CountHandshakeInitial: FC = () => {
       </Typography>
       <img
         className={style["handshake-img"]}
-        src="./images/handshake.png"
+        src="/images/handshake.png"
         alt="handshake"
       />
     </div>

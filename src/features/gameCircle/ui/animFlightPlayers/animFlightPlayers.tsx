@@ -192,7 +192,7 @@ const AnimFlightPlayersInitial: FC<AnimFlightPlayersInitialProps> = ({
   useEffect(() => {
     if (!selectedPlayer || gameScript !== "kiss" || !refKiss.current) return;
 
-    const audio = new Audio("./sounds/kiss-sound.mp3");
+    const audio = new Audio("/sounds/kiss-sound.mp3");
     audio.play();
 
     refKiss.current.style.opacity = "1";
@@ -237,7 +237,7 @@ const AnimFlightPlayersInitial: FC<AnimFlightPlayersInitialProps> = ({
     refHandshake.current.style.transform =
       "translate(-50%, -50%) rotate(-20deg) scale(1.3)";
 
-    const audio = new Audio("./sounds/handshake-sound.mp3");
+    const audio = new Audio("/sounds/handshake-sound.mp3");
     audio.play();
 
     const timeoutAnimationKiss = setTimeout(() => {
@@ -283,7 +283,7 @@ const AnimFlightPlayersInitial: FC<AnimFlightPlayersInitialProps> = ({
     refRightHeart.current.style.opacity = "1";
 
     const timeoutAnimationBrokenHeart = setTimeout(() => {
-      const audio = new Audio("./sounds/tear-sound.mp3");
+      const audio = new Audio("/sounds/tear-sound.mp3");
       audio.play();
 
       refLeftHeart.current!.style.transform =
@@ -358,14 +358,14 @@ const AnimFlightPlayersInitial: FC<AnimFlightPlayersInitialProps> = ({
 
       {gameScript === "kiss" && (
         <div className={style["kiss"]}>
-          <img ref={refKiss} src="./images/kiss.png" alt="kiss" />
+          <img ref={refKiss} src="/images/kiss.png" alt="kiss" />
         </div>
       )}
       {gameScript === "handshake" && (
         <div className={style["handshake"]}>
           <img
             ref={refHandshake}
-            src="./images/handshake.png"
+            src="/images/handshake.png"
             alt="left-side-broken-heart"
           />
         </div>
@@ -375,13 +375,13 @@ const AnimFlightPlayersInitial: FC<AnimFlightPlayersInitialProps> = ({
           <img
             ref={refLeftHeart}
             className={style["brokenHeart-left"]}
-            src="./images/left-side-broken-heart.png"
+            src="/images/left-side-broken-heart.png"
             alt="left-side-broken-heart"
           />
           <img
             ref={refRightHeart}
             className={style["brokenHeart-right"]}
-            src="./images/right-side-broken-heart.png"
+            src="/images/right-side-broken-heart.png"
             alt="right-side-broken-heart"
           />
         </div>

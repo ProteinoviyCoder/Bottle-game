@@ -24,7 +24,7 @@ const GameBottleInitial: FC<GameBottleInitialProps> = ({ players }) => {
   const [isOpenModalWidow, setIsOpenModalWindow] = useState(false);
   const [valueTimer, setValueTimer] = useState<number | null>(null);
   const [audioTimer] = useState<HTMLAudioElement>(
-    new Audio("./sounds/click-sound.mp3")
+    new Audio("/sounds/click-sound.mp3")
   );
 
   const refIsGameRuning = useRef(false);
@@ -150,7 +150,7 @@ const GameBottleInitial: FC<GameBottleInitialProps> = ({ players }) => {
 
   return (
     <div className={style["container-bottle"]}>
-      <img ref={refBottle} src="./images/bottle.png" alt="bottle" />
+      <img ref={refBottle} src="/images/bottle.png" alt="bottle" />
       {isRenderBtn && (
         <button
           className={style["spin-btn"]}
@@ -195,7 +195,7 @@ const GameBottleInitial: FC<GameBottleInitialProps> = ({ players }) => {
             Поцелуй
             <img
               className={style["img-icon-kiss"]}
-              src="./images/kiss.png"
+              src="/images/kiss.png"
               alt="kiss"
             />
           </Button>
@@ -207,7 +207,7 @@ const GameBottleInitial: FC<GameBottleInitialProps> = ({ players }) => {
             Пожать руку
             <img
               className={style["img-icon-handshake"]}
-              src="./images/handshake.png"
+              src="/images/handshake.png"
               alt="kiss"
             />
           </Button>
@@ -220,12 +220,12 @@ const GameBottleInitial: FC<GameBottleInitialProps> = ({ players }) => {
             <div className={style["containerimg-icon-broken-heart"]}>
               <img
                 className={style["img-icon-broken-heart"]}
-                src="./images/left-side-broken-heart.png"
+                src="/images/left-side-broken-heart.png"
                 alt="kiss"
               />
               <img
                 className={style["img-icon-broken-heart"]}
-                src="./images/right-side-broken-heart.png"
+                src="/images/right-side-broken-heart.png"
                 alt="kiss"
               />
             </div>

@@ -13,7 +13,7 @@ const CountKissInitial: FC = () => {
       </Typography>
       <img
         className={style["kiss-img"]}
-        src="./images/kiss.png"
+        src="/images/kiss.png"
         alt="handshake"
       />
     </div>

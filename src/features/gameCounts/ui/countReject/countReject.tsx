@@ -14,12 +14,12 @@ const CountRejectInitial: FC = () => {
       <div className={style["container-img"]}>
         <img
           className={style["reject-img-left"]}
-          src="./images/left-side-broken-heart.png"
+          src="/images/left-side-broken-heart.png"
           alt="handshake"
         />
         <img
           className={style["reject-img-right"]}
-          src="./images/right-side-broken-heart.png"
+          src="/images/right-side-broken-heart.png"
           alt="handshake"
         />
       </div>
