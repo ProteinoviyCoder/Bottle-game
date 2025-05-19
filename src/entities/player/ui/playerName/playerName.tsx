@@ -12,6 +12,7 @@ const PlayerNameInitial: FC<PlayerNameInitialProps> = ({ name }) => {
       className={style["player-name"]}
       textAlign="center"
       size="medium"
+      title={name}
     >
       {name}
     </Typography>

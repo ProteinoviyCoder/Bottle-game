@@ -18,7 +18,7 @@
   transform: translate(-50%, -50%);
 
   & img {
-    width: clamp(50px, min(15vw, 15vh), 250px);
+    width: clamp(30px, min(12.5vw, 12.5vh), 250px);
     aspect-ratio: 2/7;
     transition: 4s ease-out;
   }
@@ -73,7 +73,7 @@
   margin-top: 10px;
 
   & .modal-avatar {
-    width: clamp(20px, min(12vw, 12vh), 120px);
+    width: clamp(80px, min(12vw, 12vh), 120px);
     aspect-ratio: 1/1;
     border-radius: 50%;
     object-fit: cover;

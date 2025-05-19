@@ -8,6 +8,7 @@ type TypographyInitialProps = {
   textAlign?: "start" | "center" | "end";
   className?: string;
   children: ReactNode;
+  title?: string;
 };
 
 const TypographyInitial: FC<TypographyInitialProps> = ({
@@ -17,6 +18,7 @@ const TypographyInitial: FC<TypographyInitialProps> = ({
   textAlign: myTextAlign = "start",
   children,
   className: classNameProps,
+  title,
 }) => {
   if (type === "title") {
     return (
@@ -25,6 +27,7 @@ const TypographyInitial: FC<TypographyInitialProps> = ({
           style[`title-${size}`]
         } ${classNameProps}`}
         style={{ textAlign: myTextAlign }}
+        title={title}
       >
         {children}
       </h2>
@@ -37,6 +40,7 @@ const TypographyInitial: FC<TypographyInitialProps> = ({
         style[`text-${size}`]
       } ${classNameProps}`}
       style={{ textAlign: myTextAlign }}
+      title={title}
     >
       {children}
     </p>

@@ -163,20 +163,20 @@ const AnimFlightPlayersInitial: FC<AnimFlightPlayersInitialProps> = ({
         const windowHeigh = window.innerHeight;
 
         refCurrentPlayer.current.style.left = `${
-          windowWidth / 2 - coordsCurrentPlayerDiv.width * 2.8
+          windowWidth / 2 - coordsCurrentPlayerDiv.width * 2.4
         }px`;
         refCurrentPlayer.current.style.top = `${
           windowHeigh / 2 - coordsCurrentPlayerDiv.height / 2
         }px`;
-        refCurrentPlayer.current.style.transform = `translate(0) scale(2.2)`;
+        refCurrentPlayer.current.style.transform = `translate(0) scale(1.6)`;
 
         refSelectedPlayer.current.style.left = `${
-          windowWidth / 2 + coordsSelectedPlayerDiv.width * 1.8
+          windowWidth / 2 + coordsSelectedPlayerDiv.width * 1.4
         }px`;
         refSelectedPlayer.current.style.top = `${
           windowHeigh / 2 - coordsSelectedPlayerDiv.height / 2
         }px`;
-        refSelectedPlayer.current.style.transform = `translate(0) scale(2.2)`;
+        refSelectedPlayer.current.style.transform = `translate(0) scale(1.6)`;
       }, 100);
     });
 

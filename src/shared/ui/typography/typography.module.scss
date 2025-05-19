@@ -8,6 +8,9 @@
 .title {
   margin: 0px;
   padding: 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .title-small {
   font-size: 1.4rem;
@@ -24,6 +27,9 @@
 .text {
   margin: 0px;
   padding: 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .text-small {
   font-size: 1rem;

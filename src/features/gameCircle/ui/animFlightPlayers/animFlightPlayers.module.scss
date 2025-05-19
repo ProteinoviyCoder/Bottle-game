@@ -33,8 +33,8 @@ div.circle-anim {
 
     transition: 1s ease-out;
 
-    width: 70%;
-    max-width: 400px;
+    width: 320px;
+    max-width: 40%;
     aspect-ratio: 16 / 9;
   }
 }
@@ -55,8 +55,8 @@ div.circle-anim {
 
     transition: 1s ease-in;
 
-    width: 70%;
-    max-width: 250px;
+    width: 250px;
+    max-width: 40%;
     aspect-ratio: 1 / 1;
   }
 
@@ -70,8 +70,8 @@ div.circle-anim {
 
     transition: 1s ease-in;
 
-    width: 70%;
-    max-width: 250px;
+    width: 250px;
+    max-width: 40%;
     aspect-ratio: 1 / 1;
   }
 }
@@ -92,8 +92,8 @@ div.circle-anim {
 
     transition: 1s ease-out;
 
-    width: 70%;
-    max-width: 300px;
+    width: 250px;
+    max-width: 40%;
     aspect-ratio: 16 / 9;
   }
 }

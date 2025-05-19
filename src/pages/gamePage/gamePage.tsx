@@ -8,8 +8,8 @@ const GamePageInitial = () => {
   const players = useAppSelector((state) => state.players.allPlayers);
 
   return (
-    <div className={style["container"]}>
-      <div className={style["container-skeleton"]}>
+    <div className={style["container-bg"]}>
+      <div>
         <GameCircle players={players}>
           <GameBottle players={players} />
         </GameCircle>
